@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Simulador DUOC</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="">
     <py-script src="./credit.py"></py-script>
-    <div class="grid grid-cols-2 h-screen w-3/4">
-        <div class="grid place-content-center">
-            <form onsubmit="return false" class="grid grid-cols-1 gap-1">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" />
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" />
-                <label for="rut">RUT</label>
-                <input type="text" id="rut" name="rut" />
-                <label for="edad">Edad</label>
-                <input type="text" id="edad" name="edad" />
-                <label for="nacionalidad">Nacionalidad</label>
-                <input type="text" id="nacionalidad" name="nacionalidad" />
-                <label for="sueldo">Sueldo</label>
-                <input type="text" id="sueldo" name="sueldo" />
-                <label for="antiguedad">Años de antigüedad</label>
-                <input type="text" id="antiguedad" name="antiguedad" />
-                <label for="monto">Monto a solicitar</label>
-                <input type="text" id="monto" name="monto" />
-                <label for="cuotas">Cuotas</label>
-                <input type="text" id="cuotas" name="cuotas" />
-                <button py-click="calcular()" class="rounded-full w-1/2 mt-5 bg-amber-500">Calcular</button>
-            </form>
-         </div>
-        <div id="resultado" class="grid place-content-center gap-2">
-            <h1>Resultado de la simulación</h1>
-            <p id="resulatdo"></p>
-        </div>
+    <div class="grid grid-cols-2 w-3/4" style="height: calc(100vh - 64px)">
+      <div class="grid place-content-center">
+        <form onsubmit="return false" class="grid grid-cols-1 gap-1">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" />
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" />
+          <label for="rut">RUT</label>
+          <input type="text" id="rut" name="rut" />
+          <label for="edad">Edad</label>
+          <input type="text" id="edad" name="edad" />
+          <label for="nacionalidad">Nacionalidad</label>
+          <input type="text" id="nacionalidad" name="nacionalidad" />
+          <label for="sueldo">Sueldo</label>
+          <input type="text" id="sueldo" name="sueldo" />
+          <label for="antiguedad">Años de antigüedad</label>
+          <input type="text" id="antiguedad" name="antiguedad" />
+          <label for="monto">Monto a solicitar</label>
+          <input type="text" id="monto" name="monto" />
+          <label for="cuotas">Cuotas</label>
+          <input type="text" id="cuotas" name="cuotas" />
+          <button
+            py-click="calcular()"
+            class="rounded-full w-1/2 mt-5 bg-amber-500"
+          >
+            Calcular
+          </button>
+        </form>
+      </div>
+      <div id="resultado" class="grid place-content-center gap-2 text-lg">
+        <h1>Resultado de la simulación</h1>
+        <p id="resulatdo"></p>
+      </div>
     </div>
+    <footer class="h-16 bg-amber-500 grid place-content-center">
+      Desarrollado por Abdo & Montiel | Docente Jorge Canales
+    </footer>
   </body>
 </html>

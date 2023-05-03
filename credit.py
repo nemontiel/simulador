@@ -55,7 +55,7 @@ def calcular(*args, **kwargs):
                         append=True)
         resultado.write(f"Tasa Mensual: {tasa}%", append=True)
         resultado.write(f"Cuotas: {Element('cuotas').value}", append=True)
-        resultado.write(f"Monto a Pagar: ${format(total,'_')}", append=True)
+        resultado.write(f"Monto a Pagar: ${format(total,',')}", append=True)
     else:
         resultado.write(
             f"{Element('nombre').value} {Element('apellido').value} {Element('rut').value}",
