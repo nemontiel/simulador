@@ -23,15 +23,15 @@ def calcular(*args, **kwargs):
     total = round(interes + monto)
 
     if edad < edadMin or edad > edadMax:
-        problemas.append("Su edad no es válida, debe tener entre 24 y 79 años")
+        problemas.append("Edad no válida, debe tener entre 24 y 79 años")
     if "chile" not in nacionalidad.lower():
-        problemas.append("Su nacionalidad no es válida, debe ser chileno/a")
+        problemas.append("Nacionalidad no válida, debe ser chileno/a")
     if sueldo < sueldoMin:
         problemas.append(
-            "Su sueldo no es válido, debe ser al menos de 300.000")
+            "Sueldo no válido, debe ser al menos de 300.000")
     if antiguedad < antiguedadMin:
         problemas.append(
-            "Su antigüedad laboral no es válida, debe tener al menos 3 años de antigüedad"
+            "Antigüedad laboral no válida, debe tener al menos 3 años de antigüedad"
         )
     if monto < montoMin:
         problemas.append(
@@ -55,7 +55,7 @@ def calcular(*args, **kwargs):
                         append=True)
         resultado.write(f"Tasa Mensual: {tasa}%", append=True)
         resultado.write(f"Cuotas: {Element('cuotas').value}", append=True)
-        resultado.write(f"Monto a Pagar: ${format(total,',')}", append=True)
+        resultado.write(f"Monto a Pagar: ${format(total, ',')}", append=True)
     else:
         resultado.write(
             f"{Element('nombre').value} {Element('apellido').value} {Element('rut').value}",
